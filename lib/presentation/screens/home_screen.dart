@@ -10,6 +10,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey,
       appBar: AppBar(
         title: const Text('Post API'),
         centerTitle: true,
@@ -24,7 +25,7 @@ class HomeScreen extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const PostScreen()),
                 );
               },
-              child: const Text('Get Posts'),
+              child: const Text('    Get Posts     '),
             ),
 
             ElevatedButton(
