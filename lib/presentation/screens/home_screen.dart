@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey,
       appBar: AppBar(
-        title: const Text('Post API'),
+        title: const Text('Get API'),
         centerTitle: true,
       ),
       body: Center(
@@ -25,7 +25,10 @@ class HomeScreen extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const PostScreen()),
                 );
               },
-              child: const Text('    Get Posts     '),
+              child: const Text('    Get Posts     ',
+              style: TextStyle(
+                color: Colors.black
+              ),),
             ),
 
             ElevatedButton(
@@ -34,7 +37,10 @@ class HomeScreen extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const CharacterScreen()),
                 );
               },
-              child: const Text('Get Characters'),
+              child: const Text('Get Characters',
+                style: TextStyle(
+                    color: Colors.black
+                ),),
             ),
           ],
         ),
