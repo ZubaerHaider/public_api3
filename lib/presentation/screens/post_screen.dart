@@ -30,9 +30,11 @@ class _PostScreenState extends State<PostScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey.shade400,
       appBar: AppBar(
-        title: const Text('Posts'),
+        title: const Text('Posts',style: TextStyle(color: Colors.white),),
         centerTitle: true,
+        backgroundColor: Colors.grey.shade800,
       ),
       body: isLoading
           ? const Center(
