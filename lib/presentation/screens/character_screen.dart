@@ -48,69 +48,71 @@ class _CharacterScreenState extends State<CharacterScreen> {
           itemCount:character.results!.length,
           itemBuilder: (context, index) {
             final object = character.results![index];
-            return  Card(
-              elevation: 10,
-              color: Colors.grey.shade700,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  children: [
-                    Image.network('${object.image}',
-                      height: 120,
-                      width: 120,
-                    ),
-                    const SizedBox(width: 20),
-                     Column(
-                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('${object.name}',
-                          style: const TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white
+            return  Padding(
+              padding: const EdgeInsets.all(3.0),
+              child: Card(
+                elevation: 10,
+                color: Colors.grey.shade700,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      Image.network('${object.image}',
+                        height: 120,
+                        width: 120,
+                      ),
+                      const SizedBox(width: 20),
+                       Column(
+                         crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('${object.name}',
+                            style: const TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white
+                            ),
                           ),
-                        ),
-                        Row(
-                          children: [
-                            const Icon(
-                              Icons.circle,
-                              size: 10,
-                              color: Colors.green,
-                            ),
-                            const SizedBox(width: 5),
-                            Text("${object.status} - ",
-                              style: const TextStyle(
-                                  fontSize: 10,
-                                  color: Colors.white
+                          Row(
+                            children: [
+                              const Icon(
+                                Icons.circle,
+                                size: 10,
+                                color: Colors.green,
                               ),
-                            ),
-                            Text(character.results![index].species!,
-                              style: const TextStyle(
-                                  fontSize: 10,
-                                  color: Colors.white
+                              const SizedBox(width: 5),
+                              Text("${object.status} - ",
+                                style: const TextStyle(
+                                    fontSize: 10,
+                                    color: Colors.white
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
-                        Text('Gender :${object.gender} ',
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 12,
+                              Text(character.results![index].species!,
+                                style: const TextStyle(
+                                    fontSize: 10,
+                                    color: Colors.white
+                                ),
+                              ),
+                            ],
                           ),
-                        ),
-                        const Text('Created:',style: TextStyle(color: Colors.white,fontSize: 12),),
-                        Text('${object.created}',style: const TextStyle(color: Colors.white,fontSize: 12),),
-                        const Text('First seen in:',style: TextStyle(color: Colors.white,fontSize: 12),),
-                        Text('${object.origin?.name}',style: const TextStyle(fontSize: 12,color: Colors.white),)
-                      ],
-                    )
-                  ],
+                          Text('Gender :${object.gender} ',
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 12,
+                            ),
+                          ),
+                          const Text('Created:',style: TextStyle(color: Colors.white,fontSize: 12),),
+                          Text('${object.created}',style: const TextStyle(color: Colors.white,fontSize: 12),),
+                          const Text('First seen in:',style: TextStyle(color: Colors.white,fontSize: 12),),
+                          Text('${object.origin?.name}',style: const TextStyle(fontSize: 12,color: Colors.white),)
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ),
             );
           }
       )
-
     );
   }
 }
