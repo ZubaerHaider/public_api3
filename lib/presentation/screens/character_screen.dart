@@ -80,13 +80,7 @@ class _CharacterScreenState extends State<CharacterScreen> {
                                 color: Colors.green,
                               ),
                               const SizedBox(width: 5),
-                              Text("${object.status} - ",
-                                style: const TextStyle(
-                                    fontSize: 10,
-                                    color: Colors.white
-                                ),
-                              ),
-                              Text(character.results![index].species!,
+                              Text("${object.status} - ${object.species} ",
                                 style: const TextStyle(
                                     fontSize: 10,
                                     color: Colors.white
@@ -94,7 +88,7 @@ class _CharacterScreenState extends State<CharacterScreen> {
                               ),
                             ],
                           ),
-                          Text('Gender :${object.gender} ',
+                          Text('Gender : ${object.gender} ',
                             style: const TextStyle(
                               color: Colors.white,
                               fontSize: 12,
