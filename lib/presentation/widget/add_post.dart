@@ -27,7 +27,7 @@ class _AddPostState extends State<AddPost> {
     super.dispose();
   }
 
-  Future<bool> _validateFields() async {
+  Future<bool> _isValidate() async {
     if (_titleController.text.isEmpty || _bodyController.text.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
@@ -95,7 +95,7 @@ class _AddPostState extends State<AddPost> {
           const SizedBox(height: 10,),
           ElevatedButton(
             onPressed: () async {
-              if (await _validateFields()) {
+              if (await _isValidate()) {
                 Map<String, dynamic> body = {
                   "title": _titleController.text,
                   "body": _bodyController.text,
@@ -108,7 +108,7 @@ class _AddPostState extends State<AddPost> {
                         content: Text('Submission Successful!'),
                       ),
                     );
-                    Navigator.pop(context);
+
                   } else {
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
