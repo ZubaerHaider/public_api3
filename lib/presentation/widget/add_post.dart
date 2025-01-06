@@ -112,7 +112,7 @@ class _AddPostState extends State<AddPost> {
                   } else {
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
-                        content: Text('Submission Failed! Please try again.'),
+                        content: Text('Submission Failed!.'),
                       ),
                     );
                   }
